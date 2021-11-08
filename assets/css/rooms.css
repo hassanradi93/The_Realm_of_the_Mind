@@ -1,0 +1,318 @@
+/* css for rooms page */
+:root {
+  --darkColor: #000;
+  --colorNb1: #f99300;
+  --colorNb2: Wheat;
+  --colorNb1RGB: RGB (249,147,0);
+  --colorNb1RGB1: RGB (249,147,0,0.25);
+  --colorNb1RGB2: RGB (249,147,0,0.6);
+  --colorNb1RGB3: RGB (249,147,0,0.22);
+  --font1: 'Trebuchet MS', sans-serif !important;
+  --font2: 'Roboto', sans-serif; !important;
+}
+/* Style the tab  */
+.tab .button:hover {
+  /* background-color: var(--colorNb1); */
+  color: var(--colorNb1) !important;
+  font-size: 20px;
+  margin-top: -20px;
+  /* box-shadow: rgb(249 149 0 / 30%) 0px 5px 3px 2px, rgb(249 149 0 / 90%) 0px 3px 6px 3px !important; */
+}
+
+.tab .active{
+  /* background-color: var(--colorNb1); */
+  color: var(--colorNb1) !important;
+  border-bottom: 1px solid var(--colorNb1);
+  /* box-shadow: rgba(249, 149, 0, 0.25) 0px 54px 55px, rgba(249, 149, 0, 0.8) 0px -12px 30px, rgba(249, 149, 0, 0.9) 0px 4px 6px, rgba(249, 149, 0, 0.9) 0px 12px 13px, rgba(249, 149, 0, 0.09) 0px -3px 5px !important;
+   */
+}
+
+.tab button {
+  background-color: inherit;
+  color:var(--colorNb2) !important;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab {
+  overflow: hidden;
+  /* border: 1px solid var(--colorNb1) ; */
+  background-color: #00000067;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  animation: .5s ease-out 0s 1 slideUpFromLeft;
+}
+
+.grid-container-section .initial-title{
+  text-align: center;
+  color: var(--colorNb1);
+}
+
+.grid-container-section p{
+  text-align: center;
+  color: var(--colorNb2);
+}
+
+.tabcontent .first-title{
+  font-size: 25px;
+  color:var(--colorNb1);
+}
+
+.tabcontent .intorduction{
+  color:var(--colorNb2);
+  text-align:justify;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabcontent .second-title{
+  font-size: 20px;
+  color:var(--colorNb1);
+}
+
+.tabcontent .privacy-rules{
+  padding-left: 50px;
+  text-align: justify !important;
+  color: var(--colorNb2);
+}
+
+.tabcontent .privacy-rules p{
+  padding-left: 30px;
+  text-align: justify !important;
+  width: 90%;
+}
+
+.tabcontent .privacy-rules p strong{
+  color: var(--colorNb1);
+}
+
+.tabcontent .privacy-rules ul{
+  list-style-type: circle !important;
+  width: 90%;
+}
+
+.tabcontent .privacy-rules ul li{
+  font-size: 13px;
+  display:list-item;
+  list-style-position:outside;
+}
+
+.tabcontent .privacy-rules ul li strong{
+  font-size: 14px;
+  color: var(--colorNb1);
+}
+
+@keyframes slideUpFromLeft {
+  0% {
+    transform: translateY(100%);
+  }
+  75% { 
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+	.tab, .tabcontent{
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .tabcontent .first-title{
+    font-size: 28px;
+  }
+
+  .tabcontent .second-title{
+    font-size: 22px;
+  }
+
+  .tabcontent .privacy-rules ul li{
+    font-size: 14px;
+  }
+  
+  .tabcontent .privacy-rules ul li strong{
+    font-size: 15px;
+  }
+}
+
+.room-img a img{
+  height: 300px;
+}
+
+.sale-room{
+  width: 120px !important;
+}
+
+.gcob-b3-span span{
+  color: var(--colorNb1);
+}
+
+.room-title{
+  font-size: 33px;
+  -webkit-animation: animate-color 2s ease-in;  
+  animation: animate-color 2s ease-in;
+  color: var(--colorNb2);
+}
+
+@-webkit-keyframes animate-color {
+  from {
+    color: var(--colorNb1);
+  }
+  to {
+    color: var(--colorNb1);
+  } 
+}
+
+.dates-form label{
+    font-size: 18px;
+    color: var(--colorNb2);
+}
+
+.dates-form input{
+  font-size: 18px;
+  color: var(--colorNb2);
+  border: 1px solid var(--colorNb2);
+  background: transparent;
+  text-align: center;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: var(--colorNb2) !important;
+  filter: invert(0.8);
+}
+
+.dates-form input:hover, .dates-form input:focus{
+  border: 1px solid var(--colorNb1);
+  color: var(--colorNb1);
+}
+
+::-webkit-calendar-picker-indicator:hover,::-webkit-calendar-picker-indicator:focus  {
+  color: var(--colorNb1);
+}
+
+.btn-date{
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  text-align: center;
+}
+
+.btn-date button, #confirm-btn-room button{
+  border: 1px solid var(--colorNb2);
+  background: transparent;
+  color: var(--colorNb2);
+  font-size: 22px;
+  width: 120px;
+  transition: border 0.5s ease;
+  transition: font-weight 0.5s ease;
+}
+
+.btn-date button:hover, #confirm-btn-room button:hover{
+  background: transparent;
+  color: var(--colorNb1);
+  border: 1px solid var(--colorNb1);
+  font-weight:bold;
+}
+
+/* Smartphones */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .date-here  {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .date-here  label{
+      float: left;
+      padding-left: 3px;
+    }
+
+    .date-here  input{
+      float: right;
+      padding-right: 3px;
+    }
+
+    .room-result-block{
+      width: 100% !important;
+      text-align: center !important;
+    }
+}
+
+#msg-search-room{
+  font-size: 12px;
+  color: var(--colorNb2);
+}
+
+#title-search-room{
+  font-size: 24px;
+  color: var(--colorNb2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#title-search-room strong{
+  color: var(--colorNb1) !important;
+  font-weight: bold;
+}
+
+.book-author input[type='radio']:after{
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: var(--colorNb2);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--colorNb1);
+}
+
+.book-author input[type='radio']:checked:after{
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: var(--colorNb1);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--colorNb2);
+}
+
+#confirm-btn-room{
+  font-size: 12px;
+  color: var(--colorNb2);
+}
+
+#set-rooms-result{
+  border-top:1px solid var(--colorNb1);
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.room-result-block .room-img img{
+  width:100%;
+}
